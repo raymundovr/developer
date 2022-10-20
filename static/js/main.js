@@ -239,7 +239,7 @@ class SearchResultFilter {
 class SearchResult {
   constructor() {
     this.data
-    this.projects = ["Spin", "Cloud"]
+    this.projects = ["Spin"]
     this.resultItems = list("div.result-section", SearchResultItem)
     this.resultFilters = new SearchResultFilter(this.projects, this.filter.bind(this))
     this.el = el("div.result-section-container", this.resultFilters, this.resultItems)
@@ -283,7 +283,6 @@ class ModalSuggest {
     this.projectData = [
       { project: "Spin", link1: ["Quickstart", "/spin/quickstart/"], link2: ["Configure", "/spin/configuration/"],
        link3: ["Develop", "/spin/developing"], link4: ["Deploy", "/spin/deploying-to-fermyon/"] },
-      { project: "Cloud", link1: ["Quickstart", "#"], link2: ["Filler", "#"], link3: ["Filler", "#"], link4: ["Filler", "#"] },
     ]
     this.projectRecommendations = list("div.result-section", ProjectRecommendations)
     this.projectRecommendations.update(this.projectData)

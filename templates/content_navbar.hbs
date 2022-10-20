@@ -32,10 +32,7 @@
             <div class="logo-project">
                 <a href="#">
                     {{#if (active_project request.spin-path-info "/spin/" )}} Spin
-                    {{else}}
-                    {{#if (active_project request.spin-path-info "/cloud/" )}} Fermyon Cloud
                     {{else}} Developer Home
-                    {{/if}}
                     {{/if}}
                     ⌄
                 </a>
@@ -43,20 +40,9 @@
             <div class="dropdown-content">
                 <a href="/index">Developer Home</a>
                 <a href="/spin/index/" {{#if (active_project request.spin-path-info "/spin/" )}} class="is-active" {{/if}}>Spin</a>
-                <a href="/cloud/index/" {{#if (active_project request.spin-path-info "/cloud/" )}} class="is-active" {{/if}}>Fermyon Cloud</a>
             </div>
         </div>
         <div class="dropdown-backdrop"></div>
-        {{!-- <div class="logo-project">
-            <a href="/spin" {{#if (active_project request.spin-path-info "/spin/" )}} class="is-active" {{/if}}>Spin
-            </a>
-        </div>
-
-        <div class="logo-project">
-            <a href="/cloud" {{#if (active_project request.spin-path-info "/cloud/" )}} class="is-active" {{/if}}>
-                Fermyon Cloud
-            </a>
-        </div> --}}
 
         <div class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="docsMenu">
             <span></span>
